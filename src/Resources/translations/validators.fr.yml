@@ -86,6 +86,24 @@ bitbag_sylius_cms_plugin:
         link:
             min_length: Le lien doit faire au moins {{ limit }} caractères.
             max_length: Le lien ne peut pas dépasser {{ limit }} caractères.
+    event:
+        image:
+            mime_types: Seuls les fichiers PNG, SVG et JPEG sont autorisés.
+            not_blank: L'image ne peut pas être vide.
+        code:
+            unique: Il existe déjà un évènement avec ce code.
+            not_blank: Le code ne peut pas être vide.
+            min_length: Le code doit faire au moins {{ limit }} caractères.
+            max_length: Le code ne peut pas dépasser {{ limit }} caractères.
+        name:
+            min_length: Le nom doit faire au moins {{ limit }} caractères.
+            max_length: Le nom ne peut pas dépasser {{ limit }} caractères.
+        link:
+            min_length: Le lien doit faire au moins {{ limit }} caractères.
+            max_length: Le lien ne peut pas dépasser {{ limit }} caractères.
+        content:
+            not_blank: Le contenu ne peut pas être vide
+            min_length: Le contenu doit faire au moins {{ limit }} caractères.
     import:
         not_blank: Le fichier à importer ne peut pas être vide.
         invalid_format: Ceci n'est pas un fichier CSV valide.

@@ -1,0 +1,23 @@
+BitBag\SyliusCmsPlugin\Entity\Event:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+              fields: [code]
+              groups: ['bitbag']
+              message: 'bitbag_sylius_cms_plugin.event.code.unique'
+    properties:
+        code:
+            - NotBlank:
+                  message: 'bitbag_sylius_cms_plugin.event.code.not_blank'
+                  groups: ['bitbag']
+            - Length:
+                  min: 2
+                  max: 250
+                  minMessage: 'bitbag_sylius_cms_plugin.event.code.min_length'
+                  maxMessage: 'bitbag_sylius_cms_plugin.event.code.max_length'
+                  groups: ['bitbag']
+            - Regex:
+                  pattern: '/^[\w-]*$/'
+                  message: 'bitbag_sylius_cms_plugin.event.code.regex'
+                  groups: [ 'bitbag' ]
+        translations:
+            - Valid: ~

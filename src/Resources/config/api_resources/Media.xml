@@ -22,6 +22,9 @@
             <collectionOperation name="shop_get_media">
                 <attribute name="method">GET</attribute>
                 <attribute name="path">/shop/cms-plugin/media</attribute>
+                <attribute name="filters">
+                    <attribute>cms.section_filter</attribute>
+                </attribute>
             </collectionOperation>
 
         </collectionOperations>

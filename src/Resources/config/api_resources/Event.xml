@@ -22,6 +22,9 @@
             <collectionOperation name="shop_get_event">
                 <attribute name="method">GET</attribute>
                 <attribute name="path">/shop/cms-plugin/events</attribute>
+                <attribute name="filters">
+                    <attribute>cms.section_filter</attribute>
+                </attribute>
             </collectionOperation>
 
         </collectionOperations>

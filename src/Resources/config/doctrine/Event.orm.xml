@@ -23,7 +23,7 @@
             <gedmo:timestampable on="update"/>
         </field>
 
-        <field name="location" column="location" type="string" length="250" unique="true"/>
+        <field name="location" column="location" type="string" length="250" nullable="true"/>
 
         <field name="startAt" column="start_at" type="datetime_immutable" nullable="true"/>
 
